@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Dirección visual V1 — Dark Performance + Neo Athletic */
+@theme inline {
+  --color-bg: #080d12;
+  --color-surface: #14222b;
+  --color-border: #22343f;
+  --color-accent: #22d3e6;
+  --color-text: #f5f8fa;
+  --color-muted: #afc0c7;
+
+  --font-display: var(--font-oswald);
+  --font-sans: var(--font-manrope);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #080d12;
+  color: #f5f8fa;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
